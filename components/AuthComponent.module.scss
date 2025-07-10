@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 8px;
+  padding: 10px;
+  direction: rtl; /* Right-to-left for Persian text */
+
+  &:focus {
+    border: 3px solid goldenrod;
+  }
+
+  &::placeholder {
+    color: #808080;
+    text-align: right;
+  }
+  &.empty {
+    text-align: right;
+    direction: rtl;
+  }
+
+  &.notEmpty {
+    text-align: left;
+    direction: ltr;
+  }
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center;
+  direction: rtl;
+  max-width: 220px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  button {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
